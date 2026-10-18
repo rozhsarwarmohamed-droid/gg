@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Months of the Year – Grade 5 ESL</title>
+<style>
+:root{--u:min(1vh,.56vw);--pu:#3b1f6b;--go:#f4b400;--co:#ff6f5e;--te:#1fb5a5;--cr:#fff8e7;--ink:#2a1650}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;height:100dvh;padding-bottom:80px;background:var(--pu);color:var(--ink);font:22px 'Baloo 2','Nunito','Trebuchet MS',system-ui,sans-serif;overflow:hidden;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+button{font:inherit;color:inherit;border:0;touch-action:manipulation;min-height:60px;border-radius:14px;cursor:pointer}
+header{display:flex;align-items:center;gap:8px;padding:8px 16px;flex-wrap:wrap}
+h1{margin:0;font:700 34px 'Kalam','Baloo 2','Comic Sans MS',cursive;color:var(--go);flex:1 1 auto;white-space:nowrap}
+#tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{background:#5b3b9c;color:#fff;padding:4px 14px;font-weight:700}
+.tab.on{background:var(--go);color:var(--pu)}
+.chip{background:var(--cr);padding:4px 14px;font-weight:800;min-height:60px;display:flex;align-items:center;border-radius:14px}
+#book{flex:1;min-height:0;margin:0 16px;position:relative;background:var(--cr) linear-gradient(transparent 39px,#e8defa 40px) 0 0/100% 40px;border-radius:18px;overflow:hidden}
+#book::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:30px;background:radial-gradient(circle at 15px 20px,var(--pu) 0 7px,#cbbfe9 8px 11px,transparent 12px) 0 0/30px 40px repeat-y}
+main{position:absolute;inset:0 0 0 56px;padding:14px;overflow:auto;display:flex;flex-direction:column}main>*{flex-shrink:0}
+.row{display:flex;gap:14px;flex-wrap:wrap;flex:1 0 auto}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex:2 1 540px;grid-template-rows:repeat(3,1fr)}
+.m{background:#fff;border-top:10px solid var(--c);box-shadow:0 4px 0 rgba(59,31,107,.25);font-weight:800;font-size:clamp(26px,calc(var(--u)*4.2),56px);line-height:1.1;padding:8px 4px;min-height:clamp(84px,calc(var(--u)*12),150px)}
+.w{--c:#7b5cd6}.sp{--c:#1fb5a5}.su{--c:#f4b400}.au{--c:#ff6f5e}
+.m.on{background:#ffe9a8;transform:scale(1.05);box-shadow:0 0 0 5px var(--pu)}
+.card{flex:1;background:#fff;border:4px dashed var(--pu);border-radius:18px;padding:14px;text-align:center;font-size:clamp(26px,calc(var(--u)*3.8),50px);line-height:1.35;display:flex;align-items:center;justify-content:center}
+.card .e{font-size:clamp(80px,calc(var(--u)*16),180px);line-height:1}.card b{font-size:clamp(46px,calc(var(--u)*7.5),100px);display:block}
+.card i{font-style:normal;font-weight:800;color:#c2362a;font-size:clamp(30px,calc(var(--u)*5),66px)}
+.big{font-size:clamp(22px,calc(var(--u)*3),38px)!important;min-height:clamp(60px,calc(var(--u)*8),100px)!important}
+.msg,.q{font-size:clamp(28px,calc(var(--u)*4.2),56px);font-weight:700;margin:6px 0 12px;min-height:44px}
+.pb{display:inline-block;border-radius:10px;padding:0 10px;margin-right:8px;font-weight:800}
+.hint{color:#c2362a;font-weight:800}
+.slots{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:12px}
+.slot{border:3px dashed #b9a7e6;border-top:8px solid var(--c,#b9a7e6);border-radius:10px;min-height:clamp(62px,calc(var(--u)*10),120px);padding:2px 6px;font-weight:800;font-size:clamp(20px,calc(var(--u)*3.1),40px);background:#fff}
+.slot small{display:block;color:#7b5cd6;font-size:clamp(15px,calc(var(--u)*2),26px)}
+.pool,.opts,.tiles,.word,.strip{display:flex;gap:10px;flex-wrap:wrap}
+.pool .m,.opts .m{flex:1 1 200px}
+.opts .m{font-size:clamp(30px,calc(var(--u)*5.2),70px);min-height:clamp(100px,calc(var(--u)*22),260px)}.pool,.opts{align-content:flex-start}
+.strip{font-size:clamp(18px,calc(var(--u)*2.6),32px);gap:4px 14px;margin-top:14px;color:var(--pu)}
+.ok{background:#b8f0d9!important}
+.L{width:clamp(52px,calc(var(--u)*8),100px);height:clamp(64px,calc(var(--u)*10),120px);border-bottom:6px solid var(--pu);font-size:clamp(46px,calc(var(--u)*7.5),90px);text-align:center;font-weight:800;line-height:clamp(64px,calc(var(--u)*10),120px)}
+.t{width:clamp(72px,calc(var(--u)*11),140px);min-height:clamp(72px,calc(var(--u)*11),140px);background:var(--go);font-size:clamp(40px,calc(var(--u)*6.5),80px);font-weight:800;box-shadow:0 4px 0 #b58300;padding:0}
+.word{margin:6px 0 18px}
+.stack{display:flex;flex-direction:column-reverse;align-items:center;min-height:0;flex:1;font-size:clamp(24px,calc(var(--u)*8),96px);line-height:1.05}
+.cols{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;flex:1 0 auto}.cols>div{display:flex;flex-direction:column}
+.cols .m{font-size:clamp(20px,calc(var(--u)*3),38px);min-height:clamp(64px,calc(var(--u)*10),120px);width:100%}
+@keyframes sk{25%{transform:translateX(-9px)}75%{transform:translateX(9px)}}
+.shake{animation:sk .3s}
+@media(max-width:2000px){.tab,.chip{font-size:19px;padding:4px 10px;min-height:56px}header{padding:6px 12px;gap:6px}#tabs{gap:6px}}@media(max-width:1500px){h1{display:none}}
+#dlg{position:fixed;inset:0;background:rgba(59,31,107,.88);display:none;align-items:center;justify-content:center;z-index:9}
+#dlg.on{display:flex}
+#dlg>div{background:var(--cr);border-radius:18px;padding:22px 26px;width:min(560px,92vw);text-align:center}
+#dlg h2{margin:0 0 10px;font:700 34px 'Kalam','Baloo 2',cursive;color:var(--pu)}
+#dlg label{display:flex;align-items:center;gap:10px;margin:10px 0}
+#dlg input{flex:1;min-width:0;min-height:60px;font:inherit;font-weight:700;padding:0 14px;border:3px solid var(--pu);border-radius:12px;user-select:text;-webkit-user-select:text}
+#ok{width:100%;margin-top:10px;background:var(--go);font-weight:800}
+@media(prefers-reduced-motion:reduce){.shake{animation:none}}
+</style></head><body>
+<header>
+<h1>📅 Months of the Year</h1>
+<div id="tabs"></div>
+<button class="chip" id="nm">✏️ Names</button>
+<button class="chip" id="sup"></button>
+<button class="chip" id="turn"></button>
+<div class="chip" id="xp">⭐ 0</div>
+<button class="chip" id="rs">↺</button>
+</header>
+<div id="book"><main></main></div>
+<div id="dlg"><div><h2>✏️ Who is playing today?</h2>
+<label><span class="pb" style="background:#ff6f5e">1</span><input maxlength="12" placeholder="Name" autocomplete="off"></label>
+<label><span class="pb" style="background:#1fb5a5">2</span><input maxlength="12" placeholder="Name" autocomplete="off"></label>
+<label><span class="pb" style="background:#f4b400">3</span><input maxlength="12" placeholder="Name" autocomplete="off"></label>
+<button id="ok">Start</button></div></div>
+<script>
+const M=[["January","⛄","w"],["February","🌨️","w"],["March","🌷","sp"],["April","☔","sp"],["May","🌸","sp"],["June","☀️","su"],["July","🍉","su"],["August","🏊","su"],["September","🎒","au"],["October","🍂","au"],["November","🌬️","au"],["December","🧣","w"]];
+const SE={w:"winter",sp:"spring",su:"summer",au:"autumn"},PC=["#ff6f5e","#1fb5a5","#f4b400"],
+$=s=>document.querySelector(s),sh=a=>[...a].sort(()=>Math.random()-.5),R=a=>a[Math.random()*a.length|0],
+od=n=>n+(n==1?"st":n==2?"nd":n==3?"rd":"th"),NM=["","",""],raw=t=>NM[t].trim()||"P"+(t+1),esc=s=>s.replace(/[&<>"]/g,c=>"&#"+c.charCodeAt(0)+";"),pb=t=>`<span class="pb" style="background:${PC[t]}">${esc(raw(t))}</span>`,
+S={xp:0,t:0,sup:2},TB=["① Meet 5′","② Order 6′","③ Quiz 6′","④ Spell 6′","⑤ Birthdays 5′"];
+let cur=0,tm;
+function el(t,c,h,f){const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;if(f)e.onclick=f;return e}
+function add(n){S.xp+=n;$("#xp").textContent="⭐ "+S.xp}
+function bad(e){e.classList.remove("shake");void e.offsetWidth;e.classList.add("shake")}
+function hd(){$("#turn").innerHTML="▶ "+pb(S.t);$("#sup").textContent="🤝 Support: "+raw(S.sup)}
+function turn(){S.t=(S.t+1)%3;hd()}
+
+/* 1 · Meet the months */
+function meet(m){
+ const g=el("div","grid"),c=el("div","card",'<div><div class="e">📅</div>Tap a month.<br>Then say it out loud!</div>');
+ const B=M.map((x,i)=>{const b=el("button","m "+x[2],x[1]+"<br>"+x[0],()=>sel(i));g.append(b);return b});
+ function sel(i){B.forEach((b,k)=>b.classList.toggle("on",k==i));const x=M[i];
+  c.innerHTML=`<div><div class="e">${x[1]}</div><b>${x[0]}</b>is the <i>${od(i+1)}</i> month.<br>It is in <i>${SE[x[2]]}</i>.<br>🗣️ Say it!</div>`}
+ const r=el("button","tab on big","🗣️ Read together",()=>{clearInterval(tm);let i=0;sel(i++);tm=setInterval(()=>{if(i>11)return clearInterval(tm);sel(i++)},1500)});
+ const side=el("div");side.style.cssText="flex:1 1 280px;display:flex;flex-direction:column;gap:10px";side.append(c,r);
+ const row=el("div","row");row.append(g,side);m.append(row)
+}
+
+/* 2 · Order the year (team puzzle) */
+function order(m){
+ let nx=0;const sl=el("div","slots"),pl=el("div","pool"),ms=el("div","msg");
+ M.forEach((x,i)=>sl.append(el("div","slot",`<small>${i+1}</small>`)));
+ const say=()=>ms.innerHTML=nx==12?"🎉 The whole year! Read it together!":pb(S.t)+(nx?`What comes after <b>${M[nx-1][0]}</b>?`:"Which month <b>starts</b> the year?")+(S.t==S.sup?` <span class="hint">Hint: “${M[nx][0][0]}…”</span>`:"");
+ sh(M.keys()).forEach(i=>{const b=el("button","m "+M[i][2],M[i][0],()=>{
+  if(i!=nx){bad(b);return}
+  b.style.visibility="hidden";const s=sl.children[i];s.className="slot "+M[i][2];s.innerHTML=`<small>${i+1}</small>${M[i][0]}`;
+  nx++;add(10);turn();say();if(nx==12)add(30)});pl.append(b)});
+ say();m.append(ms,sl,pl)
+}
+
+/* 3 · Quick quiz (support player gets easier questions) */
+function quiz(m){
+ let n=0;const q=el("div","q"),o=el("div","opts"),st=el("div","strip");
+ function ask(){
+  o.innerHTML="";st.innerHTML="";
+  if(n==8){q.innerHTML="🏁 Quiz complete! Great job, team!";return}
+  const e=S.t==S.sup,i=Math.random()*12|0,k=R(e?[0,1]:[0,1,2,3]),a=[(i+1)%12,(i+11)%12,i,(i+1)%12][k];
+  q.innerHTML=pb(S.t)+[`What comes <b>after</b> ${M[i][0]}?`,`What comes <b>before</b> ${M[i][0]}?`,`Which month is number <b>${i+1}</b>?`,`Which month is <b>between</b> ${M[i][0]} and ${M[(i+2)%12][0]}?`][k];
+  sh([a,...sh([...M.keys()].filter(j=>j!=a)).slice(0,e?2:3)]).forEach(j=>{const b=el("button","m "+M[j][2],M[j][0],()=>{
+   if(j!=a){b.disabled=true;b.style.opacity=.35;bad(b);return}
+   b.classList.add("ok");add(10);n++;turn();setTimeout(ask,900)});o.append(b)});
+  if(e)st.innerHTML=M.map((x,j)=>`<span>${j+1}. ${x[0]}</span>`).join("")
+ }
+ ask();m.append(q,o,st)
+}
+
+/* 4 · Spell it (support player gets the first letter free) */
+function spell(m){
+ let n=0;const dk=sh(M.keys()),q=el("div","q"),wd=el("div","word"),tl=el("div","tiles");
+ function ask(){
+  wd.innerHTML="";tl.innerHTML="";
+  if(n==6){q.innerHTML="🏁 Super spellers! ✨";return}
+  const i=dk[n],w=M[i][0],e=S.t==S.sup;let p=e?1:0;
+  q.innerHTML=`${pb(S.t)}${M[i][1]} Month <b>${i+1}</b> · ${SE[M[i][2]]}. Spell it!`+(e?` <span class="hint">Starts with “${w[0]}”</span>`:"");
+  const L=[...w].map((c,k)=>el("span","L",k<p?c:""));wd.append(...L);
+  sh([...w].keys()).filter(k=>k>=p).forEach(k=>{const b=el("button","t",w[k],()=>{
+   if(b.textContent!=w[p]){bad(b);return}
+   L[p++].textContent=b.textContent;b.style.visibility="hidden";
+   if(p==w.length){add(15);n++;turn();setTimeout(ask,1200)}});tl.append(b)})
+ }
+ ask();m.append(q,wd,tl)
+}
+
+/* 5 · Birthday poll (real speaking task) */
+function bday(m){
+ const c=Array(12).fill(0),ms=el("div","msg","❓ When is your birthday?  → “My birthday is in ________.”  Tap a month to add a 🎂"),cols=el("div","cols");
+ M.forEach((x,i)=>{const d=el("div"),st=el("div","stack"),b=el("button","m "+x[2],x[0].slice(0,3),()=>{
+  c[i]++;st.append(el("span",0,"🎂"));add(5);
+  const mx=Math.max(...c),t=c.map((v,j)=>v==mx?M[j][0]:"").filter(Boolean).join(" & ");
+  ms.innerHTML=`🎉 ${pb(S.t)}“My birthday is in <b>${x[0]}</b>.”  Most birthdays: <b>${t}</b> (${mx})`;turn()});
+  d.append(st,b);cols.append(d)});
+ m.append(ms,cols)
+}
+
+const P=[meet,order,quiz,spell,bday];
+function go(i){cur=i;clearInterval(tm);document.querySelectorAll(".tab").forEach((b,k)=>b.classList.toggle("on",k==i));const m=$("main");m.innerHTML="";P[i](m)}
+TB.forEach((t,i)=>$("#tabs").append(el("button","tab",t,()=>go(i))));
+$("#turn").onclick=turn;
+$("#sup").onclick=()=>{S.sup=(S.sup+1)%3;hd()};
+$("#rs").onclick=()=>{S.xp=0;S.t=0;add(0);hd();go(cur)};
+const dl=$("#dlg"),IN=[...dl.querySelectorAll("input")];
+try{const s=JSON.parse(localStorage.getItem("moy-names"));if(Array.isArray(s))s.slice(0,3).forEach((v,i)=>NM[i]=String(v).slice(0,12))}catch(e){}
+function nmOpen(){IN.forEach((x,i)=>x.value=NM[i]);dl.classList.add("on")}
+$("#nm").onclick=nmOpen;
+$("#ok").onclick=()=>{IN.forEach((x,i)=>NM[i]=x.value.slice(0,12));try{localStorage.setItem("moy-names",JSON.stringify(NM))}catch(e){}dl.classList.remove("on");hd()};
+add(0);hd();go(0);if(!NM.some(x=>x.trim()))nmOpen();
+</script></body></html>
